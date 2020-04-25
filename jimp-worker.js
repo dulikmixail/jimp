@@ -8,7 +8,6 @@ self.addEventListener('message', e => {
     lenna
       .resize(256, Jimp.AUTO) // resize
       .quality(60) // set JPEG quality
-      .greyscale() // set greyscale
       .getBase64(Jimp.AUTO, (err, src) => {
         if (err) throw err;
         self.postMessage(src);
